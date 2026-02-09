@@ -600,10 +600,10 @@ export default function Home() {
           {/* metrics grid */}
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800 rounded-2xl overflow-hidden">
             {[
-              { value: "50K+", label: "Assets gerados por mês" },
-              { value: "14min", label: "Conclusão média por batch" },
-              { value: "98,7%", label: "Taxa de aprovação de qualidade" },
-              { value: "12x", label: "Output vs. equipa manual" },
+              { value: "40h+", label: "Poupadas por semana por cliente" },
+              { value: "85%", label: "Tarefas resolvidas sem humano" },
+              { value: "3x", label: "Mais rápido que processos manuais" },
+              { value: "0", label: "Erros em tarefas repetitivas" },
             ].map((metric, i) => (
               <Reveal key={metric.label} delay={i * 0.08}>
                 <div className="bg-surface-raised p-8 text-center">
@@ -614,59 +614,6 @@ export default function Home() {
                     {metric.label}
                   </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-
-          {/* case study cards */}
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                company: "Marca DTC de Moda",
-                result: "Substituiu uma equipa de 3 fotógrafos por um pipeline de agentes. 12.000 imagens de produto/mês, redução de custos de 90%.",
-                tags: ["E-Commerce", "Flux 2"],
-              },
-              {
-                company: "Agência de Performance",
-                result: "Automatizou a produção de criativos para 40+ clientes. 10x mais output criativo, CPA 60% mais baixo nas variantes vencedoras.",
-                tags: ["Marketing", "gpt-image-1.5"],
-              },
-              {
-                company: "Retalhista Enterprise",
-                result: "Pipeline de compliance multi-região em 8 mercados. Zero violações de marca em 6 meses de produção.",
-                tags: ["Enterprise", "Multi-modelo"],
-              },
-            ].map((cs, i) => (
-              <Reveal key={cs.company} delay={i * 0.1}>
-                <Card className="bg-surface-raised border-neutral-800 rounded-2xl hover:border-neutral-700 transition-colors h-full">
-                  <CardHeader>
-                    <div className="flex gap-2">
-                      {cs.tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="outline"
-                          className="text-[10px] border-neutral-700 text-neutral-500 font-mono rounded-md"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <CardTitle className="text-lg font-sans font-700 mt-3">
-                      {cs.company}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="font-body text-sm text-neutral-400 leading-relaxed">
-                      {cs.result}
-                    </p>
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-1.5 mt-4 text-xs font-mono text-lime hover:underline"
-                    >
-                      Ler caso de estudo <ArrowUpRight className="size-3" />
-                    </a>
-                  </CardContent>
-                </Card>
               </Reveal>
             ))}
           </div>
