@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -107,7 +108,7 @@ export default function Home() {
               height={40}
               className="h-10 w-auto"
             />
-            <span className="font-sans text-lg font-800 tracking-tight">
+            <span className="font-mono text-lg font-700 tracking-tight lowercase">
               headless
             </span>
           </a>
@@ -746,8 +747,8 @@ export default function Home() {
             {/* Pricing cards — right side, centered */}
             <div className="grid gap-6 sm:grid-cols-2">
               {/* Project */}
-              <Reveal>
-                <Card className="bg-surface-raised border-neutral-800 rounded-2xl hover:border-neutral-700 transition-colors h-full">
+              <Reveal className="h-full">
+                <Card className="bg-surface-raised border-neutral-800 rounded-2xl hover:border-neutral-700 transition-colors h-full flex flex-col">
                   <CardHeader>
                     <Badge
                       variant="outline"
@@ -763,7 +764,7 @@ export default function Home() {
                       implementar um agente ou pipeline específico na tua stack.
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-1">
                     <Separator className="bg-neutral-800 mb-6" />
                     <ul className="space-y-3">
                       {[
@@ -783,7 +784,9 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-8">
+                  </CardContent>
+                  <CardFooter className="flex-col items-stretch gap-6 mt-auto">
+                    <div>
                       <span className="font-sans text-3xl font-800 tracking-tight">
                         Personalizado
                       </span>
@@ -791,19 +794,19 @@ export default function Home() {
                         definido por projeto
                       </span>
                     </div>
-                    <Button asChild className="w-full mt-6 bg-neutral-800 text-neutral-200 font-sans font-600 rounded-xl hover:bg-neutral-700 h-11">
+                    <Button asChild className="w-full bg-neutral-800 text-neutral-200 font-sans font-600 rounded-xl hover:bg-neutral-700 h-11">
                       <a href="https://calendly.com/joao-filipe-santos1720/30min" target="_blank" rel="noopener noreferrer">
                         Iniciar Projeto
                         <ArrowRight className="size-4" />
                       </a>
                     </Button>
-                  </CardContent>
+                  </CardFooter>
                 </Card>
               </Reveal>
 
               {/* Retainer */}
-              <Reveal delay={0.1}>
-                <Card className="bg-surface-raised border-lime/30 rounded-2xl hover:border-lime/50 transition-colors glow-lime h-full relative overflow-hidden">
+              <Reveal delay={0.1} className="h-full">
+                <Card className="bg-surface-raised border-lime/30 rounded-2xl hover:border-lime/50 transition-colors glow-lime h-full relative overflow-hidden flex flex-col">
                   <div className="absolute top-0 right-0 px-4 py-1.5 bg-lime text-surface text-[10px] font-mono font-600 uppercase tracking-wider rounded-bl-xl">
                     Mais Popular
                   </div>
@@ -822,7 +825,7 @@ export default function Home() {
                       otimização e novas capacidades.
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-1">
                     <Separator className="bg-neutral-800 mb-6" />
                     <ul className="space-y-3">
                       {[
@@ -842,7 +845,9 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-8">
+                  </CardContent>
+                  <CardFooter className="flex-col items-stretch gap-6 mt-auto">
+                    <div>
                       <span className="font-sans text-3xl font-800 tracking-tight">
                         Personalizado
                       </span>
@@ -850,13 +855,13 @@ export default function Home() {
                         avença mensal
                       </span>
                     </div>
-                    <Button asChild className="w-full mt-6 bg-lime text-surface font-sans font-700 rounded-xl hover:bg-lime/90 h-11">
+                    <Button asChild className="w-full bg-lime text-surface font-sans font-700 rounded-xl hover:bg-lime/90 h-11">
                       <a href="https://calendly.com/joao-filipe-santos1720/30min" target="_blank" rel="noopener noreferrer">
                         Marcar Chamada
                         <ArrowRight className="size-4" />
                       </a>
                     </Button>
-                  </CardContent>
+                  </CardFooter>
                 </Card>
               </Reveal>
             </div>
@@ -923,7 +928,7 @@ export default function Home() {
                   height={35}
                   className="h-9 w-auto"
                 />
-                <span className="font-sans text-base font-800 tracking-tight">
+                <span className="font-mono text-base font-700 tracking-tight lowercase">
                   headless
                 </span>
               </div>
@@ -947,10 +952,10 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-700">
             <span>&copy; {new Date().getFullYear()} Headless. Todos os direitos reservados.</span>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-neutral-400 transition-colors">
+              <a href="/privacidade" className="hover:text-neutral-400 transition-colors">
                 Privacidade
               </a>
-              <a href="#" className="hover:text-neutral-400 transition-colors">
+              <a href="/termos" className="hover:text-neutral-400 transition-colors">
                 Termos
               </a>
             </div>
