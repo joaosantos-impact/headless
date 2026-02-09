@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:uppitai.com)",
+      "WebFetch(domain:nateherk.com)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:www.uforocks.com)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(bun --version:*)",
+      "Bash(export PATH=\"$HOME/.bun/bin:$PATH\")",
+      "Bash(bunx shadcn@latest init:*)",
+      "Bash(curl:*)",
+      "Bash(bun add:*)",
+      "Bash(bun next build:*)",
+      "Bash(npx next build:*)",
+      "Bash(./node_modules/.bin/next build:*)",
+      "Bash(bun run build:*)",
+      "Bash(echo:*)",
+      "Bash(bun ./node_modules/.bin/next:*)",
+      "Bash(bun run:*)",
+      "Bash(/Users/joaosantos/.bun/bin/bun:*)",
+      "Bash(/bin/bash:*)",
+      "Bash(export PATH:*)"
+    ]
+  }
+}
